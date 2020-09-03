@@ -16,3 +16,6 @@ run stan_hmm_nb.R and stan_hmm_ps.R as "Rscript stan_hmm_MODEL.R" on the command
 must be run in tmux window and within conda enviornment where you have STAN installed 
 modify script to run at 5,10,50 iterations, on final iteration uncomment out line that writes viterbi states to a txt file
 
+install STAN using 
+source("https://bioconductor.org/biocLite.R")
+biocLite("STAN")
