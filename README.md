@@ -27,8 +27,12 @@ stan_hmm_nb.R gives you model parameters - you can check if theyre any good by s
 validate_IESpositions.sh uses the output of stan_hmm.R to create folders of the output broken up by chromosome (ex. /viterbidata_nb_25_2state or /viterbidata_nb_25_3state)
 
 validate_IESpositions.sh then loops the chrX_viterbi file simultaneously with the chrX_IES_in_mic.tsv file in flowsortdata/retention_scores using the script validate_IESpositions.R 
+##IMPORTANT## to check which viterbi state (1,2,3 ect) stan_HMM assigned to each group (IES v. Mac v. zero coverage) - check the parameters.txt file - modify this appropriately in the validate_IESpositions.R file. 
 
 command line is run as bash validate_IESpositions.sh (no input) in the main HMM folder where the stan_hmm.R output is 
+
+#Visualizing results of validate_IESpositions.sh 
+validate_IESpositions_graphing.R see how much of each IES the viterbi assignment captured (in % of correctly state assigned bps) - can compare to different model runs (2 v. 3 states, etc) 
 
 #Identifying IESs in individual GE sequencing data 
 in the /work/aahowel3/HMM/indiviudal_GEs/coverage_files folder the script coverage.sh generates indiviudal coverage.txt files from the bams generated in the /work/aahowel3/Ancestor folder 
