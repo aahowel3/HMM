@@ -16,17 +16,19 @@ install STAN using
 source("https://bioconductor.org/biocLite.R")
 biocLite("STAN")
 
-the output of stan_hmm_nb.R is viterbidata_nb_25_2state.txt and viterbidata_nb_25_3state.txt 
-the folders /viterbidata_nb_25_2state and /viterbidata_nb_25_3state contain the respective main files broken up by chromosome 
+the output of stan_hmm_nb.R is viterbidata_nb_25_2state.txt and viterbidata_nb_25_3state.txt (you can change parameters - model, bw iterations, # of states by changing variable header section of stan_hmm_nb.R) 
 
 modified stan_hmm_nb.R so that it also prints the parameter output to a file instead of the command line - parameter_experimentvariables.txt
 
-#Check if the viterbi algo predits KNOWN IESs 
-using the viterbi data per chromosome in either /viterbidata_nb_25_2state or /viterbidata_nb_25_3state, loop the chrX_viterbi file simultaneously with the chrX_IES_in_mic.tsv file in flowsortdata/retention_scores using the scripts validate_IESpositions.R and validate_IESpositions.sh 
 
-command line is run as bash validate_IESpositions.sh /viterbidata_nb_25_2state/*viterbidata* inside the viterbidata_nb_25_2state_validated folder which will loops chrx_viterbi and chrX_IES files through the R script validate_IESpositions.R
-3 state version is run as bash validate_IESpositions.sh /viterbidata_nb_25_3state/*viterbidata* inside the viterbidata_nb_25_3state_validated folder
+#Check if the viterbi algo predits KNOWN IESs 
+stan_hmm_nb.R gives you model parameters - you can check if theyre any good by seeing how they assign states within known IES regions 
+
+validate_IESpositions.sh uses the output of stan_hmm.R to create folders of the output broken up by chromosome (ex. /viterbidata_nb_25_2state or /viterbidata_nb_25_3state)
+
+validate_IESpositions.sh then loops the chrX_viterbi file simultaneously with the chrX_IES_in_mic.tsv file in flowsortdata/retention_scores using the script validate_IESpositions.R 
+
+command line is run as bash validate_IESpositions.sh (no input) in the main HMM folder where the stan_hmm.R output is 
 
 #Identifying IESs in individual GE sequencing data 
-
 in the /work/aahowel3/HMM/indiviudal_GEs/coverage_files folder the script coverage.sh generates indiviudal coverage.txt files from the bams generated in the /work/aahowel3/Ancestor folder 
