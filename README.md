@@ -36,3 +36,5 @@ validate_IESpositions_graphing.R see how much of each IES the viterbi assignment
 
 #Identifying IESs in individual GE sequencing data 
 in the /work/aahowel3/HMM/indiviudal_GEs/coverage_files folder the script coverage.sh generates indiviudal coverage.txt files from the bams generated in the /work/aahowel3/Ancestor folder 
+
+#Working script to simulate observations in order to test the Viterbi and BW algorithims of the STAN package is simulate_hmm_onemorego.R on your local. 
