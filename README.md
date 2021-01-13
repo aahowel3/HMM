@@ -12,6 +12,8 @@ uses samtools depth to create coverage file - this is the emissions data fed int
 #idiot the output bam, sam, and coverage folders output to the main /work/aahowel3/Ancestor folder not into the HMM folder, why did you do that 
 
 spits out AncestorsGE_tomic_coverage.txt in /work/aahowel3/HMM - coverage depth every position in all chromosomes 
+######AncestorGE_tomic_coverage.txt is now for coverage data INCLUDING dup reads - cut out rmdup line of code in samtools file
+######AncestorGE_tomic_coverage_2.txt is now for coverage data generated using the samtools rmdup command 
 R script stan_hmm_nb.R use the STAN package to take AncestorsGE_tomic_coverage.txt input and estimate parameters and output the viterbi assignment for each position. 
 model type (NB v. Poisson), number of states and number of BW iterations manually changed within the script 
 must be run in tmux window and within conda enviornment where you have STAN installed 
