@@ -1,10 +1,13 @@
 # HMM for identifying excision boundaries and estimating ploidy
 
-sequencing data from /work/aahowel3/Ancestor 1-20 A and B 
+sequencing data from /work/aahowel3/Ancestor GES 1-20 A and B 
+combined L001-L004 Ancestor files generated using Joelle's script
+https://github.com/joellejohnson/Cartwrightlabprojects/blob/master/READme%20Anc%20.pdf 
 all scripts run in hines /work/aahowel3/HMM
 
 #Identifying IESs in pooled GE sequencing data 
 HMM_dataprocessing.sh - aligns Ancestor R1 and R2 GEs one at a time to the reference rather than concatenating them and aligning all at once
+the samtools rmdup processing you did probably is fine but in reality I dont think you needed to do this 
 uses samtools depth to create coverage file - this is the emissions data fed into the HMM
 #idiot the output bam, sam, and coverage folders output to the main /work/aahowel3/Ancestor folder not into the HMM folder, why did you do that 
 
