@@ -59,7 +59,7 @@ sim_em=sim_emissions[,c("chromosome","bp_pos","emission")]
 colnames(sim_em)=c("chromosome", "bp_pos", "coverage")
 
 #####
-#run your simulated emissions through the STAN parameter estimators - should get out what you put in god willing 
+#run your simulated emissions through the STAN parameter estimators - should get out what you put in 
 #####
 #data structure this package takes is a list of matrices 
 #force dataframe to matric and then convert integers to doubles
