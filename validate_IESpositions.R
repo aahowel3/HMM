@@ -28,7 +28,7 @@ list_pulledout_viterbis=apply(test_subset, 1, f)
 #IES-chr is ALSO not a unique identifer bc some contigs are used to assemble the same chromosme multiple times 
 #IES-chr-IES_in_chr_startposition should be unique 
 #create new column within the IES data list and rename list of dataframes w that 
-#FUCKMYLIFE the IES identifers arent even unique in data1 they use the same goddamn identifier for 2 IESs in the same supercontig 
+#IES identifers arent even unique in data1 they use the same identifier for 2 IESs in the same supercontig 
 #but theres only 2 and they do start in diff positions in the same chr so the identifer IES_chr_startpos is still unique
 #need to rename >names in the IES fasta 
 test_subset$uniqueidentifier = paste0(test_subset$IES_ID, "-", test_subset$chromosome_name, "-IES_in_chr_startpos_", test_subset$IES_in_chromosome_start)
