@@ -41,5 +41,5 @@ Validate_IESpositions_graphing.R plots how much of each IES the viterbi assignme
 in the /work/aahowel3/HMM/indiviudal_GEs/coverage_files folder the script coverage.sh generates indiviudal coverage.txt files from the bams generated in the /work/aahowel3/Ancestor folder 
 
 # Simulate observations in order to test the Viterbi and BW algorithims of the STAN package
-simulate_hmm_onemorego.R uses a Monte Carlo simulation to generate emissions data from the estimated parameters of the STAN package 
+simulate_hmm.R uses a Monte Carlo simulation to generate emissions data from the estimated parameters of the STAN package 
 Input parameters of the simulations should be the output of the Viterbi and BW algorithims of the STAN package
