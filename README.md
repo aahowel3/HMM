@@ -38,6 +38,10 @@ command line is run as bash validate_IESpositions.sh (no input argument) in the 
 Concatenate all the chrX tsv files together per folder for the input into script Validate_IESpositions_graphing.R
 Validate_IESpositions_graphing.R plots how much of each IES the viterbi assignment captured (in % of correctly state assigned bps) - can compare to different model runs (2 v. 3 states, etc) 
 
+# Check if the viterbi algorithim predits Novel IESs 
+novelIEScalls.R and novelIEScalls.sh work similarly to validate_IESpositions.R/.sh - checks proportions of viterbi IES state assignments in regions outside Hamilition 2016 defined IESs. 
+If there is a small proportion of high % regions they may be novel IESs - if there is a large proportion of high % regions the algorithim may be overreaching (as with a 3 state algorithim where both state 1 and 3 are called as IESs) 
+
 # Identifying IESs in individual GE sequencing data 
 in the /work/aahowel3/HMM/indiviudal_GEs/coverage_files folder the script coverage.sh generates indiviudal coverage.txt files from the bams generated in the /work/aahowel3/Ancestor folder 
 
