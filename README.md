@@ -35,6 +35,7 @@ IMPORTANT to check which viterbi state (1,2,3 ect) stan_HMM assigned to each gro
 command line is run as bash validate_IESpositions.sh (no input argument) in the main HMM folder where the stan_hmm.R output is 
 
 # Visualizing results of validate_IESpositions.sh 
+Concatenate all the chrX tsv files together per folder for the input into script Validate_IESpositions_graphing.R
 Validate_IESpositions_graphing.R plots how much of each IES the viterbi assignment captured (in % of correctly state assigned bps) - can compare to different model runs (2 v. 3 states, etc) 
 
 # Identifying IESs in individual GE sequencing data 
