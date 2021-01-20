@@ -41,7 +41,8 @@ Validate_IESpositions_graphing.R plots how much of each IES the viterbi assignme
 # Check if the viterbi algorithim predits Novel IESs 
 novelIEScalls.R and novelIEScalls.sh work similarly to validate_IESpositions.R/.sh - checks proportions of viterbi IES state assignments in regions outside Hamilition 2016 defined IESs. 
 If there is a small proportion of high % regions they may be novel IESs - if there is a large proportion of high % regions the algorithim may be overreaching (as with a 3 state algorithim where both state 1 and 3 are called as IESs) 
-Downloaded all output chr1-5.tsv files to local and edited MDS name to include chromosomoe# - need to update this in next round in the novelIEScalls.R script
+Modified so that between IES intervals - i.e MDSs - cover nested/overlapping IESs 
+
 
 # Identifying IESs in individual GE sequencing data 
 in the /work/aahowel3/HMM/indiviudal_GEs/coverage_files folder the script coverage.sh generates indiviudal coverage.txt files from the bams generated in the /work/aahowel3/Ancestor folder 
