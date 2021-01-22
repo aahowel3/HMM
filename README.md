@@ -12,6 +12,7 @@ The output bam, sam, and coverage folders output to the main /work/aahowel3/Ance
 Final output of HMM_dataprocessing.sh is AncestorsGE_tomic_coverage.txt in /work/aahowel3/HMM - coverage depth every position in all chromosomes 
 AncestorGE_tomic_coverage.txt and coverage folder is now for coverage data INCLUDING dup reads - removed the rmdup line of code in samtools file
 AncestorGE_tomic_coverage_2.txt and coverage2 is now for coverage data generated using the samtools rmdup command 
+Did not physically remove or comment out the samtools rmdup line in the HMM_dataprocessing script - but by using the intermediate sorted.bam files instead of the rmdup_sorted.bam files to create AncestorGE_tomic_coverage.txt the effect is the same 
 
 R script stan_hmm_nb.R use the STAN package to take AncestorsGE_tomic_coverage.txt input and estimate parameters and output the viterbi assignment for each position. 
 model type (Negative Binomial v. Poisson), number of states and number of Baum-Welch iterations can changed within the script in the variable header section 
