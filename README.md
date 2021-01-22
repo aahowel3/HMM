@@ -46,7 +46,7 @@ Modified so that between IES intervals - i.e MDSs - cover nested/overlapping IES
 
 
 # Identifying IESs in individual GE sequencing data 
-in the /work/aahowel3/HMM/indiviudal_GEs/coverage_files folder the script coverage.sh generates indiviudal coverage.txt files from the bams generated in the /work/aahowel3/Ancestor folder 
+in the /work/aahowel3/HMM/indiviudal_GEs/coverage_files folder the script coverage.sh generates indiviudal coverage.txt files from the bams generated in the /work/aahowel3/Ancestor folder - modified to now pull from sorted.bam files instead of rmdup.sorted.bam files
 
 # Simulate observations in order to test the Viterbi and BW algorithims of the STAN package
 simulate_hmm.R uses a Monte Carlo simulation to generate emissions data from the estimated parameters of the STAN package 
