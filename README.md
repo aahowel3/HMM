@@ -67,6 +67,8 @@ Next step is finding where those reads end up in an ancestor GE to mic reference
 
 # Work in progress - A different question - per sample, what is the coverage at each documented MAC excision site? 
 If there is minimal coverage at a MAC excision site - could indicate an excision shift 
+in coverage_IESboundariers/reads_atmacex_perancestor - reads_macex_peranc.sh - creates PERANC_reads_atexcisionssites.bam from the POOLED_reads_atexcisionssites.bam
+calculate_macexcov.sh - for each PERANC_reads_atexcisionssites.bam file, for each MAC excision site - runs it through macex.R to calculate average depth per macex site - appends to an output file per GE ancestor ANC_macexcov.txt - file output per ancestor is a list of MACEX sites and their depths 
 
 # Work in progress - what is the coverage per ancestor GE in a MIC alignment and a MAC alignment - this will tell us which to pull for deep sequencing  
-If there is minimal coverage at a MAC excision site - could indicate an excision shift 
+In HMM/overallcoverage avgcov.sh and avgcov2.sh (one for running MIC and MAC covs simultaneously) - calculates samtools depth for each ancestor and averages it using avgcov.R - the final output is a single list of 1) anc 2) overall coverage - 2 final files one for MIC cov and MAC cov 
