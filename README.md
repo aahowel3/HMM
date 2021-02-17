@@ -65,6 +65,8 @@ Next step is finding where those reads end up in an ancestor GE to mic reference
 
 ##############Scripts above here need to be updated to pull from new bamfiles in /work/aahowel3/Alignments 
 
-# A different question - per sample, what is the coverage at each documented MAC excision site? 
+# Work in progress - A different question - per sample, what is the coverage at each documented MAC excision site? 
 If there is minimal coverage at a MAC excision site - could indicate an excision shift 
 
+# Work in progress - what is the coverage per ancestor GE in a MIC alignment and a MAC alignment - this will tell us which to pull for deep sequencing  
+If there is minimal coverage at a MAC excision site - could indicate an excision shift 
