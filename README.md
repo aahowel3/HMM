@@ -85,3 +85,6 @@ Updated using /work/Alignments
 In HMM/overallcoverage avgcov.sh and avgcov2.sh (one for running MIC and MAC covs simultaneously) - calculates samtools depth for each ancestor and averages it using avgcov.R - the final output is a single list of 1) anc 2) overall coverage - 2 final files one for MIC cov and MAC cov 
 
 Validating these coverage calculations with another coverage tool in gatk - run using gatkcovestimates.sh 
+
+# Testing new validation metrics in HMM2 
+Anc 4 is the best coverage sample combined from replicate A and B (88x) - test original IES viterbi calling metric, Reed's junction likelihood metric using the forward algo, and try an additional validation with Pairties 
