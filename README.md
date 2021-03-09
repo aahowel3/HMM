@@ -88,3 +88,5 @@ Validating these coverage calculations with another coverage tool in gatk - run 
 
 # Testing new validation metrics in HMM3
 Anc 4 is the best coverage sample combined from replicate A and B (88x) - test original IES viterbi calling metric, Reed's junction likelihood metric using the forward algo, and try an additional validation with Pairties 
+
+R script forwardalgo_junlik.R in local HMM
