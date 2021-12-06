@@ -94,3 +94,6 @@ pulledoutviterbis.R - all continuous stretches of vit2 with RLE function
 HMMM_smoothing.R - condensing those continuous stretches with IRanges
 
 In local HMM/novel_IESs - coverage_dist.R gets you the line dist graph of coverage as well as bar graph of coverages
+
+# Removing large coverage levels from data
+EM_3comp_scratch.R 
