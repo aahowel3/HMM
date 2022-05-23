@@ -1,3 +1,4 @@
+#https://rstudio-pubs-static.s3.amazonaws.com/154174_78c021bc71ab42f8add0b2966938a3b8.html
 #the binomial equation itself here is fine
 #prob of being in either/or component is a binary 0 or 1 thats still good - until we try it with 3 components 
 #but what needs to change is the likelihood dist our samples are coming from
