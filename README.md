@@ -26,20 +26,20 @@ modified `stan_hmm_nb.R` so that it also prints the parameter output to a file i
 `validate_IESpositions.sh` then loops the chrX_viterbi file simultaneously with the chrX_IES_in_mic.tsv file in flowsortdata/retention_scores using the script `validate_IESpositions.R` 
 IMPORTANT to check which viterbi state (1,2,3 ect) stan_HMM assigned to each group (IES v. Mac v. zero coverage) - check the parameters.txt file - modify this appropriately in the validate_IESpositions.R file. 
 
-# Visualizing results of validate_IESpositions.sh 
+### Visualizing results of validate_IESpositions.sh 
 Concatenate all the chrX tsv files together per folder for the input into script `Validate_IESpositions_graphing.R`
 `Validate_IESpositions_graphing.R` plots how much of each IES the viterbi assignment captured (in % of correctly state assigned bps) - can compare to different model runs (2 v. 3 states, etc) 
 
-# Check if the viterbi algorithim predits Novel IESs 
+### Check if the viterbi algorithim predits Novel IESs 
 `novelIEScalls.R` and `novelIEScalls.sh` work similarly to `validate_IESpositions.R/.sh` - checks proportions of viterbi IES state assignments in regions outside Hamilition 2016 defined IESs. 
 If there is a small proportion of high % regions they may be novel IESs - if there is a large proportion of high % regions the algorithim may be overreaching (as with a 3 state algorithim where both state 1 and 3 are called as IESs) 
 Modified so that between IES intervals - i.e MDSs - cover nested/overlapping IESs - using IRanges function 
 
-# Simulate observations in order to test the Viterbi and BW algorithims of the STAN package
+### Simulate observations in order to test the Viterbi and BW algorithims of the STAN package
 `simulate_hmm.R` uses a Monte Carlo simulation to generate emissions data from the estimated parameters of the STAN package 
 Input parameters of the simulations should be the output of the Viterbi and BW algorithims of the STAN package
 
-# Check how much of an issue dips in coverage NEAR an IES will be for single samples
+### Check how much of an issue dips in coverage NEAR an IES will be for single samples
 In HMM/coverage_IESboundaries script `coverage_atmacexcisions_2.sh` uses macexcisionsite.bed file (concatenated from the 5 files in flowsortdata/bam_IRS2 and first column removed to make it bed format) to pull reads from samtools merged ancestors GE aligned to mac reference from /work/Alignments/mac folder that cross the boundary into the file reads_atexcisionsites.bam 
 
 Next step is finding where those reads end up in an ancestor GE to mic reference alignment - in `searchreadsmic.sh` breaks up reads_atexcisionsites.bam by first and second in pair, uses those names as text files to pull out those reads in the ancestor to mic alignments - sort by first and second in pair and count of those, how many are unmapped?
