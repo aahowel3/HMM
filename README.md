@@ -18,7 +18,7 @@ model type (Negative Binomial v. Poisson), number of states and number of Baum-W
 The output of `stan_hmm_nb.R` is `viterbidata_exerpimentalvariables_state.txt` (you can change parameters - model, bw iterations, # of states by changing variable header section of stan_hmm_nb.R) 
 modified `stan_hmm_nb.R` so that it also prints the parameter output to a file instead of the command line - `parameter_experimentvariables.txt`
 
-![Alt text](https://github.com/aahowel3/HMM/blob/master/HMM_model.png)
+![Alt text](https://github.com/aahowel3/HMM/blob/master/HMM_model_resize.png)
 
 ### Validate if the viterbi algorithim predits known (Hamilton et. al, 2016) IESs 
 `stan_hmm_nb.R` gives you model parameters - you can check if the are accurate predictions by seeing how they assign states within known IES regions 
