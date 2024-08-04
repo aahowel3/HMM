@@ -2,7 +2,7 @@
 
 Studies indicate (Abyzov et al., [2011](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3106330/); Feng et al., [2017](https://academic.oup.com/nar/article/45/16/9481/4037355)) that the retention of IESs and their excision boundaries exhibit variability during conjugation, making mutation detection at these regions unreliable. To identify these complex regions in each MA sample I have implemented a Hidden Markov Model (HMM) to characterize genomic regions based on sequencing depth. Preliminary results indicate a 2-state, Poisson distributed HMM with a minimum of 50 Baum-Welch iterations is the best fit model. By incorporating information from the HMM into Denovogear the false positive rate of mutation discovery can be further decreased by including the likelihood of multiple genotypes at a variably retained/excised IES boundary.
 
-![Alt text](https://github.com/aahowel3/HMM/blob/master/HMM_modelsample.png)
+![Alt text](https://github.com/aahowel3/HMM/blob/master/HMM_model_resize.png)
 
 ### Identifying IESs in pooled GE sequencing data 
 `HMM_dataprocessing.sh` - aligns Ancestor R1 and R2 GEs one at a time to the reference rather than concatenating them and aligning all at once
@@ -20,7 +20,7 @@ model type (Negative Binomial v. Poisson), number of states and number of Baum-W
 The output of `stan_hmm_nb.R` is `viterbidata_exerpimentalvariables_state.txt` (you can change parameters - model, bw iterations, # of states by changing variable header section of stan_hmm_nb.R) 
 modified `stan_hmm_nb.R` so that it also prints the parameter output to a file instead of the command line - `parameter_experimentvariables.txt`
 
-![Alt text](https://github.com/aahowel3/HMM/blob/master/HMM_model_resize.png)
+![Alt text](https://github.com/aahowel3/HMM/blob/master/HMM_modelsample.png)
 
 ### Validate if the viterbi algorithim predits known (Hamilton et. al, 2016) IESs 
 `stan_hmm_nb.R` gives you model parameters - you can check if the are accurate predictions by seeing how they assign states within known IES regions 
